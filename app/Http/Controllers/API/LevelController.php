@@ -97,7 +97,7 @@ class LevelController extends Controller
             $level->delete();
             return response()->json(['msg'=>'item deleted'], 204);
         } catch(\Illuminate\Database\QueryException $ex) {
-            return response()->json(['msg'=>'invalid data'], 400); 
+            return response()->json(['msg'=>'invalid data'], 501); 
         }
     }
 }
